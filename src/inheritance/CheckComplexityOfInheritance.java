@@ -11,7 +11,7 @@ public class CheckComplexityOfInheritance {
 	static String p = null;
 	
 	public static void main(String[] args) throws IOException {
-		 p = "/home/harsha/Music/inheritancePro/CustomerDTO.java";
+		 p = "C:\\Users\\HP\\eclipse-workspace\\inheritancePro\\src\\inheritancePro\\CustomerDTO.java";
 
 	        int superClass = 0;
 
@@ -34,10 +34,11 @@ public class CheckComplexityOfInheritance {
 	                        String[] className = lWord.split("[{]");
 
 	                        System.out.println(className[0]);
-	                        Path path = Paths.get(f.getAbsolutePath());
+	                        Path path = Paths.get(f.getAbsolutePath(), args);
 	                        String directory = path.getParent().toString();
 
-	                        p = directory + "/" + className[0] + ".java";
+	                        System.out.println(directory);
+	                        p = directory + "\\" + className[0] + ".java";
 	                        System.out.println(p);
 
 	                        break;
