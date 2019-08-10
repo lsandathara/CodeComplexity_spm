@@ -3,15 +3,95 @@ package ControlStructures;
 import java.util.List;
 
 public class ifConditionCheck {
-	public void checkif() {
+	public int checkif() {
+		int count =0;
 		
 		ReadFile readfile = new ReadFile();
-		String var = readfile.readfile();
-		if(var.contains("if")) {
-			System.out.println("this code block contains if");
+		String block = readfile.readfile();
+		
+		//conditional ontrol structures : weight is 1
+		if(block.contains("if")) {
+			count++;
+			if(block.contains("&&")) {
+				count++;
+			}
+			if(block.contains("||")) {
+				count++;
+			}
+			if(block.contains("&")) {
+				count++;
+			}
+			if(block.contains("|")) {
+				count++;
+			}
 		}
-		else
-			System.out.println("this code block doesnt contain if");
+		
+		
+		//Iterative control structures : weight is 2
+		if(block.contains("for")) {
+			count = count +2;
+			if(block.contains("&&")) {
+				count = count +2;
+			}
+			if(block.contains("||")) {
+				count = count +2;
+			}
+			if(block.contains("&")) {
+				count = count +2;
+			}
+			if(block.contains("|")) {
+				count = count +2;
+			}
+		}
+		if(block.contains("while")) {
+			count = count +2;
+			if(block.contains("&&")) {
+				count = count +2;
+			}
+			if(block.contains("||")) {
+				count = count +2;
+			}
+			if(block.contains("&")) {
+				count = count +2;
+			}
+			if(block.contains("|")) {
+				count = count +2;
+			}
+		}
+		if(block.contains("do while")) {
+			count = count +2;
+			if(block.contains("&&")) {
+				count = count +2;
+			}
+			if(block.contains("||")) {
+				count = count +2;
+			}
+			if(block.contains("&")) {
+				count = count +2;
+			}
+			if(block.contains("|")) {
+				count = count +2;
+			}
+		}
+		
+		//catch statements : weight is 1
+		if(block.contains("catch")) {
+			count++;
+		}
+		
+		//switch  statments		
+		if(block.contains("switch")) {			
+			count++;
+			
+			if(block.contains("case")) {
+				count++;
+			}
+		}
+		
+		
+		System.out.println(count);
+		return count;
+		
 	}
 
 }

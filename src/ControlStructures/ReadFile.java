@@ -25,7 +25,7 @@ public class ReadFile {
                 line = br.readLine();
                 
             }
-              //System.out.println(str_data);
+              
              br.close();
         } catch (FileNotFoundException e) {
             System.err.println("File not found");
