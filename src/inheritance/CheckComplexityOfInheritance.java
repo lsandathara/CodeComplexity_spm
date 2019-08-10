@@ -11,7 +11,10 @@ public class CheckComplexityOfInheritance {
 	static String p = null;
 	
 	public static void main(String[] args) throws IOException {
-		 p = "C:\\Users\\HP\\eclipse-workspace\\inheritancePro\\src\\inheritancePro\\CustomerDTO.java";
+		System.out.println("Enter the Location Of Your Class : ");
+		Scanner s = new Scanner(System.in);
+		p = s.next();
+//		 p = "C:\\Users\\HP\\eclipse-workspace\\inheritancePro\\src\\inheritancePro\\CustomerDTO.java";
 
 	        int superClass = 0;
 
