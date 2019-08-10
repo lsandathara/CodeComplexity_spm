@@ -89,7 +89,7 @@ public class ifConditionCheck {
 		}
 		
 		
-		System.out.println(count);
+		System.out.println("Cts is "+count);
 		return count;
 		
 	}
