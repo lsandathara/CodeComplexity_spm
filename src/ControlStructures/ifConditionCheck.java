@@ -82,11 +82,17 @@ public class ifConditionCheck {
 		//switch  statments		
 		if(block.contains("switch")) {			
 			count++;
+
 			
-			if(block.contains("case")) {
-				count++;
+			String[] b = block.split("default");
+			String bString = b.toString();
+			for(int i = 0;i<=b.length;i++) {
+				if(bString.contains("case")) {
+					count++;
+				}
 			}
 		}
+		
 		
 		
 		System.out.println("Cts is "+count);
