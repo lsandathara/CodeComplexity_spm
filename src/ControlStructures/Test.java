@@ -5,6 +5,9 @@ public class Test {
 		ifConditionCheck if1 = new ifConditionCheck();
 		if1.checkif();
 		
+		NestingLevelCheck nl = new NestingLevelCheck();
+		nl.nestingCheck();
+		
 	}
 
 }
