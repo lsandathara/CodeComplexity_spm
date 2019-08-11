@@ -18,6 +18,25 @@ public class SizeComplexity {
 		//System.out.println(word);
 		
 		
+		
+		if (word.contains("new")) {
+			count = count + 2;
+		}
+		if(word.contains("delete")) {
+			count = count + 2;
+		}
+		if(word.contains("throw")) {
+			count = count + 2;
+		}
+		if(word.contains("throws")) {
+			count = count + 2;
+		}
+
+
+		
+		
+		
+		
 		//Arithmetic operators
 		if (word.contains("+")) {
 			count++;
