@@ -1,15 +1,21 @@
 package ControlStructures;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
 
 public class ifConditionCheck {
-	public int checkif() {
-		int count =0;
+	public int checkif() throws FileNotFoundException {
+		String p="C:/SLIIT/year 3 sem 2/spm/test/testDoc.txt";
+		File f = new File(p);
+        Scanner input = new Scanner(f);
+
+        int count = 0;
+        while (input.hasNext()) {
+            String block = input.next();
 		
-		ReadFile readfile = new ReadFile();
-		String block = readfile.readfile();
-		
-		//conditional ontrol structures : weight is 1
+		//conditional control structures : weight is 1
 		if(block.contains("if")) {
 			count++;
 			if(block.contains("&&")) {
@@ -88,16 +94,19 @@ public class ifConditionCheck {
 			String bString = b.toString();
 			for(int i = 0;i<=b.length;i++) {
 				if(bString.contains("case")) {
+					
 					count++;
 				}
 			}
 		}
 		
+        }
 		
-		
-		System.out.println("Cts is "+count);
+		System.out.println("Ctc is "+count);
 		return count;
 		
 	}
+	
+
 
 }
