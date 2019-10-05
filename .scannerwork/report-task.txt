@@ -1,0 +1,6 @@
+projectKey=SPM_WE_09_CCMT
+serverUrl=http://localhost:9000
+serverVersion=7.6.0.21501
+dashboardUrl=http://localhost:9000/dashboard?id=SPM_WE_09_CCMT
+ceTaskId=AW2aSyI0PnKhniyR_R9C
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AW2aSyI0PnKhniyR_R9C
